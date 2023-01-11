@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      let count = 0;
+      const messages = ["Welcome to my website!", "Thanks for visiting!", "Hope you're having a great day!"];
+      
+      setInterval(changeText, 1000);
+      
+      function changeText() {
+        const textElement = document.querySelector("#text");
+        textElement.innerText = messages[count % messages.length];
+        count++;
+      }
+    </script>
+  </head>
+  <body>
+    <p id="text">Welcome to my website!</p>
+  </body>
+</html>

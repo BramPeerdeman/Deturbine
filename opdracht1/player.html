@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <script>
-      let count = 0;
-      const messages = ["Welcome to my website!", "Thanks for visiting!", "Hope you're having a great day!"];
-      
-      setInterval(changeText, 1000);
-      
-      function changeText() {
-        const textElement = document.querySelector("#text");
-        textElement.innerText = messages[count % messages.length];
-        count++;
-      }
-    </script>
-  </head>
-  <body>
-    <p id="text">Welcome to my website!</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeTurbine</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Css -->
+    <link rel="stylesheet" href="player.css">
+    <link rel="stylesheet" href="player.scss">
+    
+</head>
+<body>
+  <div id="bg-image"></div>
+    <main id="main-content">
+   <img class="bg-image" id="imageID" src="/opdracht1/assets/muziek1.jpg">
+    </main>
+    <!-- Script -->
+    <script src="player.js"></script>
+</body>
 </html>

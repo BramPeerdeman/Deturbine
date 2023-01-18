@@ -1,52 +1,37 @@
-var images = [
-"/opdracht1/assets/locatie1.jpg", 
-"/opdracht1/assets/locatie2.jpg", 
-"/opdracht1/assets/loctie3.jpeg", 
-"/opdracht1/assets/locatie4.jpg", 
-"/opdracht1/assets/muziek1.jpg"];
-var currentImg = 0;
+let counter = 0;
+let timer;
 
-//Werkt niet
-// let objects = [
-//     "/opdracht1/assets/de_turbine-logo.png"
-// ]; 
-// let currentImg1 = 0;
+// let playlist = [{name:"countdown-o", source:"countdown-o/index.html",time:"20"},
+//                 {name:"clock-blocks", source:"clock-blocks/index.html",time:"20"},
+//                 {name:"weather", source:"weather/index.html",time:"15"},
+//                 {name:"countdown-h", source:"countdown-hours/index.html",time:"20"},
+//                 {name:"clock", source:"clock/index.html",time:"20"},
+//                 {name:"weather", source:"weather/index.html",time:"15"},
+//                 {name:"voorjaarsvakantie", source:"voorjaarsvakantie-c/index.html",time:"20"}
+                
+//               ]
 
-setInterval(function() {
-    currentImg++;
-    if (currentImg === images.length) {
-        currentImg = 0;
-    }
-    document.getElementById("bg-image").classList.add("animate");
-    setTimeout(()=>{
-        document.getElementById("bg-image").style.backgroundImage = "url(" + images[currentImg] + ")";
-    },1000);
-    setTimeout(()=>{
-        document.getElementById("bg-image").classList.remove("animate");
-    },1000);
-}, 10000);
+function init(){
+  startTimer();
+  play();
+}
 
-//werkt niet
-// setInterval(function() {
-//     currentImg++;
-//     if (currentImg === images.length) {
-//         currentImg = 0;
-//     }
-//     document.getElementById("bg-image").classList.add("animate");
-//     document.getElementById("slide-object").classList.add("animate");
-//     setTimeout(()=>{
-//         document.getElementById("bg-image").style.backgroundImage = "url(" + images[currentImg] + ")";
-//     },1000);
-//     setTimeout(()=>{
-//         document.getElementById("bg-image").style.backgroundImage = "url(" + objects[currentImg1] + ")";
-//     },1000);
-//     setTimeout(()=>{
-//         document.getElementById("bg-image").classList.remove("animate");
-//         document.getElementById("slide-object").classList.remove("animate");
-//     },1000);
-// }, 10000);
+function play(){
+  console.log(counter);
+  document.getElementById("digitalsignage").src = playlist[counter].source;
+  clearInterval(timer); 
+  startTimer(playlist[counter].time); //restart timer
 
-setTimeout(function() {
-  document.getElementById('imageID').style.display='none'
-}, 10*1000);
+  counter++;
+  counter = counter > playlist.length-1 ? 0 : counter;
+  
+}
 
+
+function startTimer(time){
+  timer = setInterval(function() {
+    play();
+  },time*1000);
+}
+
+init();

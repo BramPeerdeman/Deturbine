@@ -1,8 +1,8 @@
 let counter = 0;
 let timer;
 
-let playlist = [{name:"countdown-o", source:"countdown-o/index.html",time:"20"},
-                {name:"clock-blocks", source:"clock-blocks/index.html",time:"20"},
+let playlist = [{name:"clock-blocks", source:"clock-blocks/index.html",time:"20"},
+                {name:"countdown-o", source:"countdown-o/index.html",time:"20"},
                 {name:"weather", source:"weather/index.html",time:"15"},
                 {name:"countdown-h", source:"countdown-hours/index.html",time:"20"},
                 {name:"clock", source:"clock/index.html",time:"20"},

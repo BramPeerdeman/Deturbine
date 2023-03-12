@@ -1,0 +1,26 @@
+body, html{
+    margin:0;
+    padding: 0;
+}
+.logo123{
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    left: 30px;
+    top: -30px;
+}
+
+.bg {
+ position: absolute;
+ top: -50px;
+    /* The image used */
+    background-image: url("/opdracht1/assets/pexels-vishnu-r-nair-1105666.jpg");
+  
+    /* Full height */
+ 
+  width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
